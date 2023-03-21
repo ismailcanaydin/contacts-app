@@ -2,7 +2,9 @@ import React from 'react'
 
 function Item({ item }) {
     return (
-        <div>{item.name}</div>
+        <div>
+            {item.name} - {item.phoneNumber}
+        </div>
     )
 }
 
