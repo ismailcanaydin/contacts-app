@@ -4,14 +4,14 @@ import { contactSelectors } from '../../redux/contactSlice'
 import Item from './Item'
 
 function List() {
-    const contacts = useSelector(contactSelectors.selectAll)
+  const contacts = useSelector(contactSelectors.selectAll)
 
   return (
-    <div>
-        {
-            contacts.map(contacts => (<Item key={contacts.id} item={contacts} />))
-        }
-    </div>
+    <ul className='list'>
+      {
+        contacts.map(contacts => (<Item key={contacts.id} item={contacts} />))
+      }
+    </ul>
   )
 }
 

@@ -1,3 +1,5 @@
+import '../../App.css';
+
 import { nanoid } from '@reduxjs/toolkit'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
@@ -25,9 +27,11 @@ function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input placeholder='name' value={name} onChange={(e) => setName(e.target.value)} /><br />
-        <input placeholder='phone number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} /><br />
-        <button type='submit'>Add</button>
+        <input placeholder='name' value={name} onChange={(e) => setName(e.target.value)} />
+        <input placeholder='phone number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+        <div className='btn'>
+          <button type='submit'>Add</button>
+        </div>
       </form>
     </div>
   )
