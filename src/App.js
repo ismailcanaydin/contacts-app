@@ -8,6 +8,7 @@ import {
   Route,
   createRoutesFromElements,
 } from "react-router-dom";
+import Error from './components/Contacts/Error';
 
 
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
     <Route path="/">
       <Route index element={<Contacts />} />
       <Route path="/edit/:id" element={<Edit />} />
+      <Route path="*" element={<Error />} />
     </Route>
   )
 )
